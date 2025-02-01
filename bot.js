@@ -1,7 +1,15 @@
 const TelegramBot = require("node-telegram-bot-api");
 const http = require("http");
 const axios = require("axios");
-require("dotenv").config();
+const path = require('path'); // Added missing path import
+// require("dotenv").config();
+require("dotenv").config({ path: path.join(__dirname, '.env') });
+
+// Add some startup logging
+console.log('Starting bot with configuration:');
+console.log('BOT_TOKEN length:', process.env.BOT_TOKEN?.length || 'not set');
+console.log('USER_ID:', process.env.USER_ID || 'not set');
+console.log('PORT:', process.env.PORT || '3600');
 
 // Replace with your bot token
 const BOT_TOKEN = process.env.BOT_TOKEN;
@@ -124,7 +132,7 @@ bot.on("polling_error", (error) => {
   debugLog("Polling Error", error);
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3600;
 http
   .createServer((req, res) => {
     res.writeHead(200, { "Content-Type": "text/plain" });
