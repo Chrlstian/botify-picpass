@@ -1,0 +1,20 @@
+{
+  "name": "dm-slim-the-images",
+  "version": "1.0.0",
+  "main": "dmimage.js",
+  "scripts": {
+    "start": "node dmimage.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "node-telegram-bot-api": "^0.66.0"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}
