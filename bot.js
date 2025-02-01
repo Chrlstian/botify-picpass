@@ -1,6 +1,7 @@
 const TelegramBot = require("node-telegram-bot-api");
 const http = require("http");
 const axios = require("axios");
+require("dotenv").config();
 
 // Replace with your bot token
 const BOT_TOKEN = process.env.BOT_TOKEN;
